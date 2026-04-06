@@ -3,22 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>San Francisco's Car-Crime Story Changed Shape After 2019</title>
+  <title>San Francisco's car-crime story changed shape after 2019</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --paper: #f6f1e7;
-      --paper-bright: #fcfaf6;
       --card: rgba(255, 255, 255, 0.78);
       --ink: #1d2733;
       --muted: #5a6773;
       --line: #d8d0c3;
       --teal: #1e6f7a;
-      --teal-soft: #5aa1ad;
       --orange: #c96b36;
-      --shadow: 0 24px 60px rgba(15, 23, 42, 0.1);
+      --shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
       --content: 780px;
     }
 
@@ -26,17 +24,10 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(30, 111, 122, 0.15), transparent 31%),
-        radial-gradient(circle at top right, rgba(201, 107, 54, 0.1), transparent 28%),
-        linear-gradient(180deg, var(--paper-bright) 0%, var(--paper) 100%);
+      background: linear-gradient(180deg, #fcfaf6 0%, var(--paper) 100%);
       font-family: "Source Sans 3", sans-serif;
       line-height: 1.72;
     }
@@ -58,32 +49,21 @@
 
     .hero {
       margin-bottom: 28px;
-      padding: 34px clamp(22px, 5vw, 40px);
-      border: 1px solid rgba(216, 208, 195, 0.95);
-      border-radius: 28px;
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(246, 241, 231, 0.92)),
-        radial-gradient(circle at 18% 18%, rgba(30, 111, 122, 0.14), transparent 30%);
+      padding: 30px clamp(20px, 5vw, 34px);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.72);
       box-shadow: var(--shadow);
     }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      display: inline-block;
       margin-bottom: 16px;
-      color: var(--muted);
+      color: var(--teal);
       font-size: 0.92rem;
       font-weight: 700;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 32px;
-      height: 1px;
-      background: linear-gradient(90deg, var(--teal), var(--orange));
     }
 
     h1,
@@ -117,43 +97,6 @@
 
     .byline strong {
       color: var(--ink);
-    }
-
-    .stat-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin: 28px 0 8px;
-    }
-
-    .stat-card {
-      padding: 16px 18px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255, 255, 255, 0.72);
-      backdrop-filter: blur(10px);
-    }
-
-    .stat-label {
-      margin-bottom: 5px;
-      font-size: 0.92rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-    }
-
-    .stat-value {
-      font-size: clamp(1.7rem, 4vw, 2.25rem);
-      font-weight: 700;
-      line-height: 1.05;
-    }
-
-    .stat-card.teal .stat-value {
-      color: var(--teal);
-    }
-
-    .stat-card.orange .stat-value {
-      color: var(--orange);
     }
 
     .story {
@@ -213,21 +156,8 @@
       font-size: 0.98rem;
     }
 
-    .kicker {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: rgba(30, 111, 122, 0.11);
-      color: var(--teal);
-      font-size: 0.88rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
     .small-links {
-      margin-top: 10px;
+      margin-top: 4px;
       font-size: 0.98rem;
     }
 
@@ -250,10 +180,6 @@
     }
 
     @media (max-width: 780px) {
-      .stat-strip {
-        grid-template-columns: 1fr;
-      }
-
       iframe {
         height: 590px;
       }
@@ -282,8 +208,8 @@
 <body>
   <main class="page">
     <header class="hero">
-      <div class="eyebrow">Assignment 2 data story</div>
-      <h1>San Francisco’s car-crime story changed shape after 2019</h1>
+      <div class="eyebrow">Assignment 2</div>
+      <h1>San Francisco's car-crime story changed shape after 2019</h1>
       <p class="subhead">Reported break-ins dropped hard after 2019, but reported stolen-car cases stayed elevated and spread through a different set of neighborhoods.</p>
       <div class="byline">
         <span><strong>By</strong> Olive</span>
@@ -291,29 +217,14 @@
         <span>Updated April 6, 2026</span>
       </div>
 
-      <div class="stat-strip" aria-label="Key figures from the story">
-        <div class="stat-card teal">
-          <div class="stat-label">Break-ins from parked cars</div>
-          <div class="stat-value">30,134 → 11,778</div>
-        </div>
-        <div class="stat-card orange">
-          <div class="stat-label">Motor vehicle theft</div>
-          <div class="stat-value">5,390 → 7,247</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-label">Comparison window</div>
-          <div class="stat-value">2019 to 2024</div>
-        </div>
-      </div>
     </header>
 
     <article class="story">
-      <span class="kicker">Dataset</span>
-      <p>This story uses the San Francisco Police Department incident dataset from the city’s open-data portal, but only the newer <em>2018 to present</em> file. I compare the six full calendar years from <strong>2019 through 2024</strong> and combine two pairs of subcategories: <strong>theft from parked vehicles</strong> and <strong>motor vehicle theft</strong>. That keeps the labels consistent across the full story.</p>
+      <p>This story uses the San Francisco Police Department incident dataset from the city's open-data portal, but only the newer <em>2018 to present</em> file. I compare the six full calendar years from <strong>2019 through 2024</strong> and combine two pairs of subcategories: <strong>theft from parked vehicles</strong> and <strong>motor vehicle theft</strong>. That keeps the labels consistent across the full story.</p>
       <p>The main takeaway is simple. If you only looked at one headline number, you could say vehicle-related crime went down. The more honest reading is that <strong>the problem changed shape</strong>: break-ins collapsed, especially in downtown and visitor-heavy areas, while stolen-car reports stayed well above their 2019 level and grew in several residential neighborhoods.</p>
 
       <h2>The citywide pattern split in two</h2>
-      <p>The first chart shows the split clearly. Reported break-ins from parked vehicles dropped from <strong>30,134 incidents in 2019</strong> to <strong>11,778 in 2024</strong>. That lines up with the city’s FY24 performance report, which said reported thefts from vehicles were down 57% from the previous fiscal year and at their lowest point since FY17 <a href="#ref-2">[2]</a>. Motor vehicle theft moved differently: it peaked near nine thousand reports in 2023 and ended 2024 at <strong>7,247 incidents</strong>, still well above the <strong>5,390</strong> cases recorded in 2019.</p>
+      <p>The first chart shows the split clearly. Reported break-ins from parked vehicles dropped from <strong>30,134 incidents in 2019</strong> to <strong>11,778 in 2024</strong>. That lines up with the city's FY24 performance report, which said reported thefts from vehicles were down 57% from the previous fiscal year and at their lowest point since FY17 <a href="#ref-2">[2]</a>. Motor vehicle theft moved differently: it peaked near nine thousand reports in 2023 and ended 2024 at <strong>7,247 incidents</strong>, still well above the <strong>5,390</strong> cases recorded in 2019.</p>
 
       <figure>
         <div class="media-frame">
@@ -323,8 +234,8 @@
       </figure>
 
       <h2>The geography shifted too</h2>
-      <p>The map makes the change harder to dismiss as a statistical quirk. In 2019, break-ins were packed into the city’s dense commercial and visitor areas. Financial District/South Beach recorded <strong>2,111</strong> break-ins, Hayes Valley had <strong>1,507</strong>, North Beach had <strong>1,535</strong>, and Russian Hill had <strong>1,280</strong>. By 2024, those same neighborhoods were far lower: <strong>702</strong>, <strong>442</strong>, <strong>611</strong>, and <strong>410</strong>.</p>
-      <p>That downtown contraction coincides with a city center that has not returned to its pre-pandemic rhythm. San Francisco’s office-vacancy tracker notes that vacancy was only 4.7% in the second quarter of 2019, before rising far above that level in the years that followed <a href="#ref-1">[1]</a>. I cannot say vacancy <em>caused</em> fewer break-ins, but it is a plausible backdrop: fewer commuters, fewer parked cars, and fewer visitor-heavy targets could all change where theft opportunities appear.</p>
+      <p>The map makes the change harder to dismiss as a statistical quirk. In 2019, break-ins were packed into the city's dense commercial and visitor areas. Financial District/South Beach recorded <strong>2,111</strong> break-ins, Hayes Valley had <strong>1,507</strong>, North Beach had <strong>1,535</strong>, and Russian Hill had <strong>1,280</strong>. By 2024, those same neighborhoods were far lower: <strong>702</strong>, <strong>442</strong>, <strong>611</strong>, and <strong>410</strong>.</p>
+      <p>That downtown contraction coincides with a city center that has not returned to its pre-pandemic rhythm. San Francisco's office-vacancy tracker notes that vacancy was only 4.7% in the second quarter of 2019, before rising far above that level in the years that followed <a href="#ref-1">[1]</a>. I cannot say vacancy <em>caused</em> fewer break-ins, but it is a plausible backdrop: fewer commuters, fewer parked cars, and fewer visitor-heavy targets could all change where theft opportunities appear.</p>
       <p>At the same time, the 2024 stolen-car layer is more spread out. The biggest increases are not in Financial District/South Beach or North Beach. They show up in places like <strong>Mission</strong>, where motor vehicle theft rose from <strong>506</strong> to <strong>851</strong>, and <strong>Bayview Hunters Point</strong>, where it climbed from <strong>575</strong> to <strong>868</strong>. The map therefore tells a more interesting story than a simple citywide decline: the hotspot pattern moves rather than disappearing.</p>
 
       <figure>
@@ -358,7 +269,7 @@
         <li id="ref-3"><a href="https://www.gov.ca.gov/2025/07/23/101737/" target="_blank" rel="noreferrer">Governor of California: 2024 stolen-vehicle report summary</a>.</li>
       </ol>
 
-      <p class="small-links"><a href="visualizations/vehicle_crime_map.html">Open the full map</a> · <a href="visualizations/neighborhood_shift_scatter.html">Open the full interactive chart</a></p>
+      <p class="small-links"><a href="visualizations/vehicle_crime_map.html">Open the full map</a> | <a href="visualizations/neighborhood_shift_scatter.html">Open the full interactive chart</a></p>
     </article>
 
     <footer>
