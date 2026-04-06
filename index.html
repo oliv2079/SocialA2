@@ -146,8 +146,15 @@
     }
 
     iframe {
-      height: 670px;
       background: #ffffff;
+    }
+
+    .map-frame iframe {
+      height: 620px;
+    }
+
+    .scatter-frame iframe {
+      height: 560px;
     }
 
     figcaption {
@@ -180,8 +187,12 @@
     }
 
     @media (max-width: 780px) {
-      iframe {
+      .map-frame iframe {
         height: 590px;
+      }
+
+      .scatter-frame iframe {
+        height: 520px;
       }
     }
 
@@ -199,8 +210,12 @@
         font-size: 1.03rem;
       }
 
-      iframe {
-        height: 540px;
+      .map-frame iframe {
+        height: 520px;
+      }
+
+      .scatter-frame iframe {
+        height: 500px;
       }
     }
   </style>
@@ -241,7 +256,7 @@
       <p>When you toggle the map to <strong>2024 stolen-car reports</strong>, the hotspot pattern does not disappear; it moves. <strong>Mission</strong> rises from <strong>506</strong> to <strong>851</strong> stolen-car reports, <strong>Bayview Hunters Point</strong> from <strong>575</strong> to <strong>868</strong>, and <strong>Excelsior</strong> from <strong>125</strong> to <strong>279</strong>. The vehicle-crime story therefore becomes less about the old downtown break-in economy and more about a broader residential footprint.</p>
 
       <figure>
-        <div class="media-frame">
+        <div class="media-frame map-frame">
           <iframe src="visualizations/vehicle_crime_map.html" title="Interactive heatmap comparing 2019 and 2024 vehicle-crime patterns in San Francisco" loading="lazy"></iframe>
         </div>
         <figcaption>Figure 2. Start with <strong>2019 break-ins</strong>, then toggle <strong>2024 stolen-car reports</strong>. The first layer glows around downtown and nearby visitor zones; the second shifts toward Mission, Bayview Hunters Point, and Excelsior. Because each layer is normalized separately, compare hotspot shapes rather than absolute totals.</figcaption>
@@ -253,7 +268,7 @@
       <p>This is why the safest summary is not that vehicle crime was solved. Police incident data measures <strong>reported and recorded events</strong>, not a pure underlying level of victimization. Reporting behavior, enforcement practices, commuting patterns, street activity, and vehicle security all shape the numbers. The cleanest reading is that San Francisco's vehicle-crime problem <em>shifted</em>: away from the pre-pandemic downtown break-in economy and toward a wider set of neighborhoods where stolen-car reports remained stubbornly high.</p>
 
       <figure>
-        <div class="media-frame">
+        <div class="media-frame scatter-frame">
           <iframe src="visualizations/neighborhood_shift_scatter.html" title="Interactive Plotly bubble chart showing neighborhood-level change in break-ins and motor vehicle theft" loading="lazy"></iframe>
         </div>
         <figcaption>Figure 3. The upper-left quadrant matters most: neighborhoods where break-ins fell but stolen-car reports rose. Bubble size shows 2024 combined volume, so the largest circles identify where vehicle crime still weighed most heavily in the latest year.</figcaption>
