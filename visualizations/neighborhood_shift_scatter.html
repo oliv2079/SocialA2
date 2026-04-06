@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neighborhood Shift Scatter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f1e7;
+      --card: rgba(255, 255, 255, 0.84);
+      --ink: #1d2733;
+      --muted: #52606d;
+      --line: #d7d0c4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top right, rgba(201, 107, 54, 0.1), transparent 34%),
+        linear-gradient(180deg, #fcfaf6 0%, var(--paper) 100%);
+      font-family: "Source Sans 3", sans-serif;
+    }
+
+    main {
+      padding: 18px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font: 700 1.55rem/1.1 "Fraunces", serif;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .chart-shell {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+    }
+
+    .chart-shell .plotly-graph-div {
+      height: 560px !important;
+    }
+
+    @media (max-width: 720px) {
+      .chart-shell .plotly-graph-div {
+        height: 520px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Neighborhoods did not move together</h1>
+    <p>Each bubble is a neighborhood. Large circles mark places with the biggest 2024 vehicle-crime footprint, while higher dots show neighborhoods where stolen-car reports grew.</p>
+    <div class="chart-shell">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="6f3ced06-dae6-42a9-ad7a-a04dfc321985" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("6f3ced06-dae6-42a9-ad7a-a04dfc321985")) {                    Plotly.newPlot(                        "6f3ced06-dae6-42a9-ad7a-a04dfc321985",                        [{"customdata":[[2047,766,506,851,1617,"52.6%"],[2111,702,267,288,990,"29.1%"],[1465,380,91,120,500,"24.0%"],[1507,442,130,176,618,"28.5%"],[1477,575,357,474,1049,"45.2%"],[1535,611,97,92,703,"13.1%"],[1395,500,191,199,699,"28.5%"],[1085,312,270,394,706,"55.8%"],[1280,410,99,124,534,"23.2%"],[1079,257,150,166,423,"39.2%"],[826,493,575,868,1361,"63.8%"],[841,290,55,54,344,"15.7%"],[763,282,112,136,418,"32.5%"],[648,166,27,43,209,"20.6%"],[625,209,137,181,390,"46.4%"],[533,159,87,114,273,"41.8%"],[690,416,214,325,741,"43.9%"],[786,409,183,189,598,"31.6%"],[647,307,148,182,489,"37.2%"],[600,266,176,156,422,"37.0%"],[411,101,30,38,139,"27.3%"],[369,126,93,64,190,"33.7%"],[493,281,197,252,533,"47.3%"],[442,216,38,62,278,"22.3%"],[421,179,111,105,284,"37.0%"],[294,155,113,180,335,"53.7%"],[341,186,73,106,292,"36.3%"],[327,162,79,91,253,"36.0%"],[282,133,63,88,221,"39.8%"],[243,232,125,279,511,"54.6%"],[211,155,103,199,354,"56.2%"],[204,89,48,64,153,"41.8%"],[158,49,1,2,51,"3.9%"],[157,204,83,137,341,"40.2%"],[133,99,63,122,221,"55.2%"],[161,91,56,47,138,"34.1%"],[65,11,7,2,13,"15.4%"],[59,21,15,25,46,"54.3%"],[230,215,100,116,331,"35.0%"],[37,12,16,18,30,"60.0%"],[35,17,11,19,36,"52.8%"]],"hovertemplate":"\u003cb\u003e%{text}\u003c\u002fb\u003e\u003cbr\u003eFrom-vehicle change: %{x:+,d}\u003cbr\u003eMotor vehicle theft change: %{y:+,d}\u003cbr\u003e2019 from-vehicle: %{customdata[0]:,d}\u003cbr\u003e2024 from-vehicle: %{customdata[1]:,d}\u003cbr\u003e2019 motor theft: %{customdata[2]:,d}\u003cbr\u003e2024 motor theft: %{customdata[3]:,d}\u003cbr\u003e2024 combined volume: %{customdata[4]:,d}\u003cbr\u003e2024 stolen-car share: %{customdata[5]}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":[0.5262832405689548,0.2909090909090909,0.24,0.284789644012945,0.451858913250715,0.13086770981507823,0.28469241773962806,0.5580736543909348,0.23220973782771537,0.39243498817966904,0.6377663482733285,0.1569767441860465,0.3253588516746411,0.20574162679425836,0.4641025641025641,0.4175824175824176,0.43859649122807015,0.31605351170568563,0.3721881390593047,0.3696682464454976,0.2733812949640288,0.3368421052631579,0.4727954971857411,0.22302158273381295,0.36971830985915494,0.5373134328358209,0.363013698630137,0.35968379446640314,0.39819004524886875,0.5459882583170255,0.5621468926553672,0.41830065359477125,0.0392156862745098,0.40175953079178883,0.5520361990950227,0.34057971014492755,0.15384615384615385,0.5434782608695652,0.3504531722054381,0.6,0.5277777777777778],"colorbar":{"len":0.7,"tickformat":".0%","title":{"text":"2024 stolen-car share"}},"colorscale":[[0,"#1e6f7a"],[0.5,"#5aa1ad"],[1,"#c96b36"]],"line":{"color":"rgba(29,39,51,0.55)","width":1},"opacity":0.88,"size":[1617,990,500,618,1049,703,699,706,534,423,1361,344,418,209,390,273,741,598,489,422,139,190,533,278,284,335,292,253,221,511,354,153,51,341,221,138,13,46,331,30,36],"sizemin":8,"sizemode":"area","sizeref":1.8333333333333333},"mode":"markers","showlegend":false,"text":["Mission","Financial District\u002fSouth Beach","Marina","Hayes Valley","South of Market","North Beach","Western Addition","Tenderloin","Russian Hill","Outer Richmond","Bayview Hunters Point","Golden Gate Park","Pacific Heights","Japantown","Potrero Hill","Lakeshore","Sunset\u002fParkside","Nob Hill","Castro\u002fUpper Market","West of Twin Peaks","Twin Peaks","Inner Richmond","Bernal Heights","Chinatown","Haight Ashbury","Portola","Inner Sunset","Lone Mountain\u002fUSF","Mission Bay","Excelsior","Outer Mission","Glen Park","Lincoln Park","Oceanview\u002fMerced\u002fIngleside","Visitacion Valley","Presidio Heights","Presidio","Treasure Island","Noe Valley","McLaren Park","Seacliff"],"x":[-1281,-1409,-1085,-1065,-902,-924,-895,-773,-870,-822,-333,-551,-481,-482,-416,-374,-274,-377,-340,-334,-310,-243,-212,-226,-242,-139,-155,-165,-149,-11,-56,-115,-109,47,-34,-70,-54,-38,-15,-25,-18],"y":[345,21,29,46,117,-5,8,124,25,16,293,-1,24,16,44,27,111,6,34,-20,8,-29,55,24,-6,67,33,12,25,154,96,16,1,54,59,-9,-5,10,16,2,8],"type":"scatter"},{"hoverinfo":"skip","mode":"text","showlegend":false,"text":["Mission","Financial District\u002fSouth Beach","Marina","Hayes Valley","South of Market","North Beach","Western Addition","Tenderloin"],"textfont":{"color":"#1d2733","size":11},"textposition":"top center","x":[-1281,-1409,-1085,-1065,-902,-924,-895,-773],"y":[345,21,29,46,117,-5,8,124],"type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"title":{"font":{"size":24,"color":"#1d2733"},"text":"Neighborhood change from 2019 to 2024","x":0.02},"margin":{"l":72,"r":72,"t":76,"b":72},"xaxis":{"title":{"text":"Change in thefts from parked vehicles"},"zeroline":false,"gridcolor":"#ddd6ca","tickformat":",d"},"yaxis":{"title":{"text":"Change in motor vehicle theft"},"zeroline":false,"gridcolor":"#ddd6ca","tickformat":",d"},"font":{"family":"Georgia, serif","color":"#1d2733","size":13},"paper_bgcolor":"#f6f1e7","plot_bgcolor":"#fbf8f2","shapes":[{"line":{"color":"#64748b","dash":"dash","width":1},"type":"line","x0":0,"x1":0,"y0":-69,"y1":385},{"line":{"color":"#64748b","dash":"dash","width":1},"type":"line","x0":-1489,"x1":127,"y0":0,"y1":0}],"annotations":[{"align":"left","font":{"color":"#52606d","size":12},"showarrow":false,"text":"Left means fewer reported break-ins; higher means more reported stolen-car cases.","x":0.02,"xref":"paper","y":1.02,"yref":"paper"}]},                        {"responsive": true, "displaylogo": false, "modeBarButtonsToRemove": ["lasso2d", "select2d"]}                    )                };                            </script>        </div>
+    </div>
+  </main>
+</body>
+</html>
