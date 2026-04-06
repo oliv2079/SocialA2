@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>San Francisco's car-crime story changed shape after 2019</title>
+  <title>San Francisco's car-crime drop hides a shift in what gets stolen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -208,9 +208,9 @@
 <body>
   <main class="page">
     <header class="hero">
-      <div class="eyebrow">Assignment 2</div>
-      <h1>San Francisco's car-crime story changed shape after 2019</h1>
-      <p class="subhead">Reported break-ins dropped hard after 2019, but reported stolen-car cases stayed elevated and spread through a different set of neighborhoods.</p>
+      <div class="eyebrow">San Francisco Vehicle Crime</div>
+      <h1>San Francisco's car-crime drop hides a shift in what gets stolen</h1>
+      <p class="subhead">Reports of break-ins from parked cars fell sharply after 2019, but reported stolen-car cases stayed high and spread beyond the old downtown hotspots.</p>
       <div class="byline">
         <span><strong>By</strong> Olive</span>
         <span>DTU Social Data</span>
@@ -220,59 +220,64 @@
     </header>
 
     <article class="story">
-      <p>This story uses the San Francisco Police Department incident dataset from the city's open-data portal, but only the newer <em>2018 to present</em> file <a href="#ref-1">[1]</a>. I compare the six full calendar years from <strong>2019 through 2024</strong> and combine two pairs of subcategories: <strong>theft from parked vehicles</strong> and <strong>motor vehicle theft</strong>. That keeps the labels consistent across the full story.</p>
-      <p>The main takeaway is simple. If you only looked at one headline number, you could say vehicle-related crime went down. The more honest reading is that <strong>the problem changed shape</strong>: break-ins collapsed, especially in downtown and visitor-heavy areas, while stolen-car reports stayed well above their 2019 level and grew in several residential neighborhoods.</p>
+      <p>The easiest vehicle-crime story to tell in San Francisco is that the problem got smaller after 2019. That is true if you mean smashed windows. It is much less true if you mean missing cars.</p>
+      <p>From 2019 to 2024, reported break-ins from parked vehicles fell by about <strong>61%</strong>. Reported motor vehicle theft did not follow that path. It peaked in 2023 and still ended 2024 about <strong>35%</strong> above its 2019 level. The city's vehicle-crime story did not simply improve. It <strong>split in two</strong>.</p>
+      <p>This story uses the San Francisco Police Department's <em>Police Department Incident Reports: 2018 to Present</em> dataset <a href="#ref-1">[1]</a> and compares the six full calendar years from <strong>2019 through 2024</strong>. I combine the subcategories <strong>Theft From Vehicle/Larceny - From Vehicle</strong> and <strong>Motor Vehicle Theft/Motor Vehicle Theft (Attempted)</strong> so the labels stay consistent across the full period. SF.gov's <em>Reported Offenses</em> page also tracks theft from vehicles and motor vehicle theft as distinct parts of the city's official offense picture <a href="#ref-3">[3]</a>.</p>
 
       <h2>The citywide pattern split in two</h2>
-      <p>The first chart shows the split clearly. Reported break-ins from parked vehicles dropped from <strong>30,134 incidents in 2019</strong> to <strong>11,778 in 2024</strong>. That direction matches the city's FY24 performance report, which said reported thefts from vehicles were down 57% from the previous fiscal year and at their lowest point since FY17 <a href="#ref-3">[3]</a>. It is not a one-to-one comparison, though, because the city report uses fiscal years while this story uses calendar years. Motor vehicle theft moved differently: it peaked near nine thousand reports in 2023 and ended 2024 at <strong>7,247 incidents</strong>, still well above the <strong>5,390</strong> cases recorded in 2019.</p>
+      <p>The first figure shows why a single citywide headline is misleading. Reported break-ins from parked vehicles dropped from <strong>30,134 incidents in 2019</strong> to <strong>11,778 in 2024</strong>. Reported motor vehicle theft moved differently: it climbed to a <strong>2023 peak of 8,985</strong> and still finished 2024 at <strong>7,247 incidents</strong>, well above the <strong>5,390</strong> cases recorded in 2019.</p>
+      <p>That break-in decline matches the direction of the city's <em>Annual Performance Report</em>, which says reported thefts from vehicles fell 57% from FY23 to FY24 and reached their lowest level since FY17 <a href="#ref-4">[4]</a>. My figure uses calendar years rather than fiscal years, so the counts are not identical to the city's scorecard. The important point is that both views show the same broad split: break-ins collapsed, while stolen-car reports remained elevated.</p>
 
       <figure>
         <div class="media-frame">
-          <img src="images/vehicle_crime_shift.svg" alt="Annotated line chart comparing reported thefts from parked vehicles and motor vehicle theft in San Francisco from 2019 to 2024">
+          <img src="images/vehicle_crime_shift.svg" alt="Annotated time-series chart showing break-ins from parked vehicles falling steeply after 2019 while stolen-car reports remain elevated and peak in 2023">
         </div>
-        <figcaption>Figure 1. The two series separate after 2019. Break-ins from parked cars fall steeply, but stolen-car reports remain elevated, so the overall vehicle-crime picture becomes less about smashed windows and more about missing cars.</figcaption>
+        <figcaption>Figure 1. Vehicle crime did not fall as one series. Break-ins from parked cars collapse after 2019, while reported stolen-car cases stay above their 2019 level and peak in 2023. The key change is divergence, not a uniform citywide improvement.</figcaption>
       </figure>
 
       <h2>The geography shifted too</h2>
-      <p>The map makes the change harder to dismiss as a statistical quirk. In 2019, break-ins were packed into the city's dense commercial and visitor areas. Financial District/South Beach recorded <strong>2,111</strong> break-ins, Hayes Valley had <strong>1,507</strong>, North Beach had <strong>1,535</strong>, and Russian Hill had <strong>1,280</strong>. By 2024, those same neighborhoods were far lower: <strong>702</strong>, <strong>442</strong>, <strong>611</strong>, and <strong>410</strong>.</p>
-      <p>That downtown contraction coincides with a city center that has not returned to its pre-pandemic rhythm. San Francisco's office-vacancy tracker notes that vacancy was only 4.7% in the second quarter of 2019, before rising far above that level in the years that followed <a href="#ref-2">[2]</a>. I cannot say vacancy <em>caused</em> fewer break-ins, but it is a plausible backdrop: fewer commuters, fewer parked cars, and fewer visitor-heavy targets could all change where theft opportunities appear.</p>
-      <p>When you switch the map to <strong>2024 stolen-car reports</strong>, the footprint is more spread out. The biggest increases are not in Financial District/South Beach or North Beach. They show up in places like <strong>Mission</strong>, where motor vehicle theft rose from <strong>506</strong> to <strong>851</strong>, and <strong>Bayview Hunters Point</strong>, where it climbed from <strong>575</strong> to <strong>868</strong>. The map therefore tells a more interesting story than a simple citywide decline: the hotspot pattern moves rather than disappearing.</p>
+      <p>The second change is spatial. In 2019, break-ins were packed into dense commercial and visitor-heavy neighborhoods. Financial District/South Beach recorded <strong>2,111</strong> break-ins, Hayes Valley <strong>1,507</strong>, North Beach <strong>1,535</strong>, and Russian Hill <strong>1,280</strong>. By 2024 those same neighborhoods were far lower.</p>
+      <p>That downtown contraction overlaps with a city center that still looks different from 2019. SF.gov's <em>Office Vacancy Rate</em> page notes that office vacancy was only <strong>4.70%</strong> in the second quarter of 2019 before rising far above pre-pandemic levels, and it describes downtown recovery as tightly connected to office demand and commuter activity <a href="#ref-2">[2]</a>. The same page notes that roughly 470,000 people commuted downtown each day before the pandemic. That does not prove why break-ins fell, but it does make the old downtown hotspot pattern easier to understand: fewer commuters and fewer parked cars can mean fewer easy targets.</p>
+      <p>When you toggle the map to <strong>2024 stolen-car reports</strong>, the hotspot pattern does not disappear; it moves. <strong>Mission</strong> rises from <strong>506</strong> to <strong>851</strong> stolen-car reports, <strong>Bayview Hunters Point</strong> from <strong>575</strong> to <strong>868</strong>, and <strong>Excelsior</strong> from <strong>125</strong> to <strong>279</strong>. The vehicle-crime story therefore becomes less about the old downtown break-in economy and more about a broader residential footprint.</p>
 
       <figure>
         <div class="media-frame">
           <iframe src="visualizations/vehicle_crime_map.html" title="Interactive heatmap comparing 2019 and 2024 vehicle-crime patterns in San Francisco" loading="lazy"></iframe>
         </div>
-        <figcaption>Figure 2. The map opens on <strong>2019 break-ins</strong>. Use the top-right control to toggle <strong>2024 stolen-car reports</strong> on and compare how the hotspot pattern shifts away from the old downtown core. Heat intensity is normalized within each layer, so this figure is about spatial concentration, not direct cross-layer totals.</figcaption>
+        <figcaption>Figure 2. Start with <strong>2019 break-ins</strong>, then toggle <strong>2024 stolen-car reports</strong>. The first layer glows around downtown and nearby visitor zones; the second shifts toward Mission, Bayview Hunters Point, and Excelsior. Because each layer is normalized separately, compare hotspot shapes rather than absolute totals.</figcaption>
       </figure>
 
       <h2>Neighborhoods did not move together</h2>
-      <p>The interactive scatter plot combines both trends in one view. Every point is a neighborhood. Moving left means fewer reported break-ins in 2024 than in 2019. Moving upward means more reported motor vehicle theft. The most important pattern is how many neighborhoods land in the upper-left area of the chart: <strong>fewer break-ins, but more stolen cars</strong>.</p>
-      <p>Mission is the clearest example. It loses <strong>1,281</strong> break-ins over the period, but gains <strong>345</strong> motor vehicle theft reports. Bayview Hunters Point also stands out, with a smaller break-in drop of <strong>333</strong> paired with a large motor-theft increase of <strong>293</strong>. Financial District/South Beach moves far left but barely moves up, which fits the idea that the sharpest decline stayed tied to the old downtown break-in geography.</p>
-      <p>This is also where the story becomes more careful. Police incident data measures <strong>reported and recorded events</strong>, not a pure underlying level of victimization. Reporting behavior, enforcement attention, vehicle technology, commuting patterns, and street activity can all change these numbers. That is why I prefer the phrasing that vehicle crime <em>shifted</em> rather than claiming that one type was solved or caused by a single factor.</p>
+      <p>The scatter plot combines both changes in one frame. Each point is a neighborhood. Moving left means fewer break-ins in 2024 than in 2019. Moving up means more reported stolen-car cases. The most important quadrant is the upper-left: <strong>fewer break-ins, more stolen cars</strong>.</p>
+      <p><strong>Mission</strong> is the clearest example. It loses <strong>1,281</strong> break-ins over the period but gains <strong>345</strong> stolen-car reports. <strong>Bayview Hunters Point</strong> shows the same pattern, with a smaller break-in drop and a larger stolen-car increase of <strong>293</strong>. <strong>Tenderloin</strong>, <strong>South of Market</strong>, and <strong>Excelsior</strong> also move into that same upper-left territory. <strong>Financial District/South Beach</strong>, by contrast, moves sharply left but barely up, which fits the idea that the steepest decline stayed tied to the old downtown break-in pattern.</p>
+      <p>This is why the safest summary is not that vehicle crime was solved. Police incident data measures <strong>reported and recorded events</strong>, not a pure underlying level of victimization. Reporting behavior, enforcement practices, commuting patterns, street activity, and vehicle security all shape the numbers. The cleanest reading is that San Francisco's vehicle-crime problem <em>shifted</em>: away from the pre-pandemic downtown break-in economy and toward a wider set of neighborhoods where stolen-car reports remained stubbornly high.</p>
 
       <figure>
         <div class="media-frame">
           <iframe src="visualizations/neighborhood_shift_scatter.html" title="Interactive Plotly bubble chart showing neighborhood-level change in break-ins and motor vehicle theft" loading="lazy"></iframe>
         </div>
-        <figcaption>Figure 3. Most neighborhoods move left, meaning break-ins fell. The neighborhoods above the horizontal zero line are the ones where stolen-car reports increased, and the largest bubbles show where the 2024 vehicle-crime footprint remained biggest.</figcaption>
+        <figcaption>Figure 3. The upper-left quadrant matters most: neighborhoods where break-ins fell but stolen-car reports rose. Bubble size shows 2024 combined volume, so the largest circles identify where vehicle crime still weighed most heavily in the latest year.</figcaption>
       </figure>
 
+      <p>A reader who only sees the break-in collapse could walk away thinking the broader vehicle-crime problem faded with it. The stronger conclusion is narrower and more useful: one form of vehicle crime receded dramatically, but another stayed elevated and shifted to a different neighborhood map.</p>
+
       <div class="note-box">
-        <strong>Limitations.</strong> This story uses calendar years, while some official city reports use fiscal years, so the counts will not match perfectly. It also focuses only on reported incidents in one police dataset.
+        <strong>Limitations.</strong> This story uses calendar years, while some official SF.gov scorecards use fiscal years, so the counts will not match perfectly. Police incident data also reflects what gets reported, recorded, and categorized; it is not a direct count of all victimization.
       </div>
 
       <h2>References</h2>
       <ol class="references">
-        <li id="ref-1">San Francisco Police Department incident dataset, 2018 to present. Local CSV provided in the assignment repository.</li>
+        <li id="ref-1"><a href="https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783/data" target="_blank" rel="noreferrer">DataSF: Police Department Incident Reports: 2018 to Present</a>.</li>
         <li id="ref-2"><a href="https://www.sf.gov/data--office-vacancy-rate" target="_blank" rel="noreferrer">SF.gov: Office Vacancy Rate</a>.</li>
-        <li id="ref-3"><a href="https://www.sf.gov/reports--november-2024--annual-performance-report" target="_blank" rel="noreferrer">SF.gov: Annual Performance Report, November 2024</a>.</li>
+        <li id="ref-3"><a href="https://www.sf.gov/data--reported-offenses" target="_blank" rel="noreferrer">SF.gov: Reported Offenses</a>.</li>
+        <li id="ref-4"><a href="https://www.sf.gov/reports--november-2024--annual-performance-report" target="_blank" rel="noreferrer">SF.gov: Annual Performance Report, November 2024</a>.</li>
       </ol>
 
       <p class="small-links"><a href="visualizations/vehicle_crime_map.html">Open the full map</a> | <a href="visualizations/neighborhood_shift_scatter.html">Open the full interactive chart</a></p>
     </article>
 
     <footer>
-      Built with the Week 7 export workflow: one SVG from <code>plt.savefig()</code>, one Folium map from <code>m.save()</code>, and one Plotly chart from <code>fig.write_html()</code>.
+      Based on San Francisco Police Department incident reports and SF.gov city performance sources.
     </footer>
   </main>
 </body>
